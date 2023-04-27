@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <span class="navbar-brand" href="#">Sluzba za zaposljavanje</span>
+  <span class="navbar-brand ms-3" href="#">Sluzba za zaposljavanje</span>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
@@ -9,6 +9,6 @@
   </div>
   <div class="bg-light clearfix">
     <a href="http://localhost:9090/authorize?redirect_uri=localhost%3A4200%2Fredirect&service=szz" *ngIf="!isLoggedIn()" type="button" class="btn btn-primary btn-navbar float-right">Login</a>
-    <button (click)="logout()" *ngIf="isLoggedIn()" type="button" class="btn btn-danger btn-navbar float-right">Logout</button>
+    <button (click)="logout()" *ngIf="isLoggedIn()" type="button" class="btn btn-danger btn-navbar float-right me-2">Logout</button>
   </div>
 </nav>
