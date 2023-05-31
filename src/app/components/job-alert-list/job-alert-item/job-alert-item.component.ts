@@ -8,7 +8,17 @@ import {Component, Input} from '@angular/core';
 export class JobAlertItemComponent {
   @Input() jobAlert: any;
 
-  calculateDays() {
-    return Math.floor((this.jobAlert.endDate-this.jobAlert.startDate) / 1000 / 60 / 60 / 24);
+  timeleft() {
+    let days = Math.floor((this.jobAlert.endDate - Date.now()) / 1000 / 60 / 60 / 24);
+    if(days > 1){
+      return days+" days."
+    }
+    if(days == 1){
+      return "1 day."
+    }
+    if(days < 1){
+      return "Ends today."
+    }
+    return "Something went wrong."
   }
 }
