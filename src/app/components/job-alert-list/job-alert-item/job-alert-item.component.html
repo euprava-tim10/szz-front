@@ -6,7 +6,7 @@
     Education required: {{jobAlert.neededEducation}}<br/>
     Profesion required: {{jobAlert.profession}}<br/>
     Timeleft: {{timeleft()}}<br/>
-    <button class="btn btn-primary">Applicate</button>
+    <button class="btn btn-primary" (click)="onApplicate(jobAlert.id)">Applicate</button>
   </div>
 </div>
 

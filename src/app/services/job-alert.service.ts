@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {env} from "../env";
 
@@ -7,9 +7,14 @@ import {env} from "../env";
 })
 export class JobAlertService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
-  get(){
+  get() {
     return this.http.get(`${env.apiUrl}/jobAlerts`)
+  }
+
+  applicate(jobAlertId: number) {
+    return this.http.get(`${env.apiUrl}/jobAlerts/${jobAlertId}`)
   }
 }
