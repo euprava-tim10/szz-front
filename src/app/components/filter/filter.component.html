@@ -1,0 +1,10 @@
+<div class="row g-3 ps-5 align-items-center">
+  <div class="col-auto">
+    <label>Filter: </label>
+  </div>
+  <div class="col-auto">
+    <select class="form-select display-inline" aria-label="Default select example" (change)="onPickFilter($event)">
+      <option *ngFor="let profession of professions" value="{{profession}}">{{profession}}</option>
+    </select>
+  </div>
+</div>

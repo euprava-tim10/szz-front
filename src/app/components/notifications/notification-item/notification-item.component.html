@@ -1,0 +1,25 @@
+<ng-container *ngIf="notification.status == 'ACCEPTED';else rejectedTemplate">
+  <div class="card w-50 mx-auto mb-2">
+    <div class="card-header bg-success bg-gradient">
+      <h5>ACCEPTED</h5>
+    </div>
+    <div class="card-body bg-success p-2" style="--bs-bg-opacity: .5;">
+      {{notification.jobAlert.company.name}}<br/>
+      Education required: {{notification.jobAlert.neededEducation}}<br/>
+      Profesion required: {{notification.jobAlert.profession}}<br/>
+    </div>
+  </div>
+</ng-container>
+<ng-template #rejectedTemplate>
+  <div class="card w-50 mx-auto mb-2">
+    <div class="card-header bg-danger bg-gradient">
+      <h5>REJECTED</h5>
+    </div>
+    <div class="card-body bg-danger p-2" style="--bs-bg-opacity: .5;">
+      {{notification.jobAlert.company.name}}<br/>
+      Education required: {{notification.jobAlert.neededEducation}}<br/>
+      Profesion required: {{notification.jobAlert.profession}}<br/>
+    </div>
+  </div>
+</ng-template>
+

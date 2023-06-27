@@ -8,7 +8,7 @@ import {JobAlertService} from "../../services/job-alert.service";
 })
 export class JobAlertListComponent {
   jobAlerts: any[] = [];
-
+  filteredAlerts: any[] = [];
   constructor(private jobAlertService: JobAlertService) {
   }
 
@@ -16,5 +16,18 @@ export class JobAlertListComponent {
     this.jobAlertService.get().subscribe(jobAlerts => {
       this.jobAlerts = jobAlerts as any[];
     })
+  }
+
+  filterJobs(profession: string) {
+    this.filteredAlerts = [];
+    this.filteredAlerts = this.jobAlerts.filter(jobAlert => jobAlert['profession'] === profession);
+  }
+
+  showJobAlerts(): any[] {
+    if (this.filteredAlerts.length < 1) {
+      return this.jobAlerts;
+    } else {
+      return this.filteredAlerts;
+    }
   }
 }

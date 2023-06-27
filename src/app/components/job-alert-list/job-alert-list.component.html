@@ -1,1 +1,2 @@
-<app-job-alert-item *ngFor="let jobAlert of jobAlerts" [jobAlert]="jobAlert"></app-job-alert-item>
+<app-filter (filterEventEmitter)="filterJobs($event)"></app-filter>
+<app-job-alert-item *ngFor="let jobAlert of showJobAlerts()" [jobAlert]="jobAlert"></app-job-alert-item>

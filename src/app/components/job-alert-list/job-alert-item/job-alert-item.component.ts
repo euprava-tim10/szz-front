@@ -20,8 +20,12 @@ export class JobAlertItemComponent {
     if (days == 1) {
       return "1 day."
     }
-    if (days < 1) {
+    if(days == 0){
       return "Ends today."
+    }
+    if (days < 1) {
+      return "Ended." +
+        ""
     }
     return "Something went wrong."
   }

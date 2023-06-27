@@ -10,6 +10,9 @@ import {JobAlertListComponent} from './components/job-alert-list/job-alert-list.
 import {JobAlertItemComponent} from './components/job-alert-list/job-alert-item/job-alert-item.component';
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
 import {AuthInterceptor} from "./auth/auth.interceptor";
+import { FilterComponent } from './components/filter/filter.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
+import { NotificationItemComponent } from './components/notifications/notification-item/notification-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import {AuthInterceptor} from "./auth/auth.interceptor";
     RedirectComponent,
     NavbarComponent,
     JobAlertListComponent,
-    JobAlertItemComponent
+    JobAlertItemComponent,
+    FilterComponent,
+    NotificationsComponent,
+    NotificationItemComponent
   ],
   imports: [
     BrowserModule,

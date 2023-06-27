@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Injectable({
@@ -40,9 +40,7 @@ export class AuthManagerService {
 
     let tokenParts = token.split('.');
     let tokenPayloadString = this.base64UrlDecode(tokenParts[1]);
-    let tokenPayload = JSON.parse(tokenPayloadString);
-
-    return tokenPayload;
+    return JSON.parse(tokenPayloadString);
   }
 
   isAdmin() {
