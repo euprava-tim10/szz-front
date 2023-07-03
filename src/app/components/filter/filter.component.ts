@@ -7,7 +7,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class FilterComponent {
   @Output() filterEventEmitter = new EventEmitter<string>();
-  professions = ["NO_FILTER", "ADMINISTRATION", "ECONOMICS_FINANCE_AND_INSURANCE", "ELECTRICAL_ENGINEERING_AND_TELECOMMUNICATIONS", "MEDICINE", "ARCHITECTURE_CONSTRUCTION_AND_GEODESY"];
+  professions = ["NO_FILTER", "ADMINISTRATION", "ECONOMICS_FINANCE_AND_INSURANCE", "ELECTRICAL_ENGINEERING_AND_TELECOMMUNICATIONS", "MEDICINE", "ARCHITECTURE_CONSTRUCTION_AND_GEODESY", "OTHER"];
   onPickFilter(value: any) {
     this.filterEventEmitter.emit(value.target.value);
   }

@@ -10,7 +10,7 @@ export class NotificationService {
 
   constructor(private http:HttpClient, private auth:AuthManagerService) { }
   get() {
-    return this.http.get(`${env.apiUrl}/123/notifications`)
+    return this.http.get(`${env.apiUrl}/notifications`)
   }
 
 }

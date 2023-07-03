@@ -1,5 +1,5 @@
-<ng-container *ngIf="notification.status == 'ACCEPTED';else rejectedTemplate">
-  <div class="card w-50 mx-auto mb-2">
+<ng-container [ngSwitch]="notification.status">
+  <div *ngSwitchCase="'ACCEPTED'" class="card w-50 mx-auto mb-2">
     <div class="card-header bg-success bg-gradient">
       <h5>ACCEPTED</h5>
     </div>
@@ -9,9 +9,7 @@
       Profesion required: {{notification.jobAlert.profession}}<br/>
     </div>
   </div>
-</ng-container>
-<ng-template #rejectedTemplate>
-  <div class="card w-50 mx-auto mb-2">
+  <div *ngSwitchCase="'REJECTED'"  class="card w-50 mx-auto mb-2">
     <div class="card-header bg-danger bg-gradient">
       <h5>REJECTED</h5>
     </div>
@@ -21,5 +19,16 @@
       Profesion required: {{notification.jobAlert.profession}}<br/>
     </div>
   </div>
-</ng-template>
+  <div *ngSwitchCase="'PENDING'" class="card w-50 mx-auto mb-2">
+    <div class="card-header bg-primary bg-gradient">
+      <h5>PENDING</h5>
+    </div>
+    <div class="card-body bg-primary p-2" style="--bs-bg-opacity: .5;">
+      {{notification.jobAlert.company.name}}<br/>
+      Education required: {{notification.jobAlert.neededEducation}}<br/>
+      Profesion required: {{notification.jobAlert.profession}}<br/>
+    </div>
+  </div>
+</ng-container>
+
 

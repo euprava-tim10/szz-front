@@ -32,6 +32,13 @@ export class JobAlertItemComponent {
 
   onApplicate(id: number) {
     this.jobAlertService.applicate(id).subscribe(data => {
+      if(data){
+
+        alert("Uspesno ste aplicirali za posao")
+      }else {
+        alert("Nemate nivo obrazovanja da aplicirate na ovaj konkurs")
+
+      }
       console.log(data as any);
     })
   }

@@ -8,11 +8,11 @@ import {RedirectComponent} from './redirect/redirect.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {JobAlertListComponent} from './components/job-alert-list/job-alert-list.component';
 import {JobAlertItemComponent} from './components/job-alert-list/job-alert-item/job-alert-item.component';
-import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthInterceptor} from "./auth/auth.interceptor";
-import { FilterComponent } from './components/filter/filter.component';
-import { NotificationsComponent } from './components/notifications/notifications.component';
-import { NotificationItemComponent } from './components/notifications/notification-item/notification-item.component';
+import {FilterComponent} from './components/filter/filter.component';
+import {NotificationsComponent} from './components/notifications/notifications.component';
+import {NotificationItemComponent} from './components/notifications/notification-item/notification-item.component';
 
 @NgModule({
   declarations: [
